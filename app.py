@@ -810,7 +810,7 @@ def return_book():
                         <br><br> On loan (ID: {loan.id} ) at {safe_format_datetime(loan.actual_return_date)}
                         <br><br> Previous book quantity: {previous_book_quantity}
                         <br><br> Updated book quantity: {book.book_quantity}
-                    {"""<br><br> <mark>Book quantity back in stock</mark>, unless activated in the system it wont be active for loan""" if previous_book_quantity == 0 else ""} """)
+                    {"<br><br> <mark>Book quantity back in stock</mark>, unless activated in the system it wont be active for loan" if previous_book_quantity == 0 else ""} """)
 
             return jsonify({"success_on_time": { "bookname":book_name,
                                                 "customername":customer_name,
@@ -834,7 +834,7 @@ def return_book():
                         <br> {safe_format_datetime(loan.actual_return_date)}
                     <br><br> Previous book quantity: {previous_book_quantity}
                     <br><br> Updated book quantity: {book.book_quantity}
-                {"""<br><br> <mark>Book quantity back in stock</mark>, unless activated in the system it wont be active for loan""" if previous_book_quantity == 0 else ""} """)
+                {"<br><br> <mark>Book quantity back in stock</mark>, unless activated in the system it wont be active for loan" if previous_book_quantity == 0 else ""} """)
         
         return jsonify({ "success_late": {"return_due_date": safe_format_datetime(loan.return_due_date) , 
                                         "actual_return_date": safe_format_datetime(loan.actual_return_date),
