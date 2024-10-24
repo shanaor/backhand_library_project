@@ -83,3 +83,4 @@ ____
 -    typing_extensions==4.12.2
 -    Werkzeug==3.0.4
 -    gunicorn==20.1.0
+-    pytz==2024.2
