@@ -1,10 +1,10 @@
-# <u> Library managment Application</u>
+# <u> Library management Application</u>
 
-**This project is for library stock and customer managment**
+**This project is for library stock and customer management**
 
 **<u>This is the backend python script for its server logic</u>**
 
-<br> This is the link to the Frontend ---->>> [Project frontend](https://www.example.com)
+<br> This is the link to the Frontend ---->>> [Project frontend](https://github.com/shanaor/frontend_library_project?tab=readme-ov-file)
 
 ## <br><u>It has the following features:</u>
 
@@ -26,8 +26,8 @@
 16. And Reset Data to 5 automatic customers and books
 
 ### <u>additional features in the script</u>
-I organized it by sections using comment command and I used a log file to log every action reponse to the frontend requests. <br>
-I made comments as detailed as possible when in the begining I explain every line and later when its repetitive I added less comments
+I organized it by sections using comment command and I used a log file to log every action response to the frontend requests. <br>
+I made comments as detailed as possible when in the beginning I explain every line and later when its repetitive I added less comments
 assuming the pattern is already recognized. <br>
 
 Some of the SQLAlchemy commands are the new style of writing that is entering slowly in Use - The: **db.session.{command}(table class, requested variable)** <br> So please be aware and not confused.
@@ -40,14 +40,14 @@ Using it in the ***Log_action method*** It is used to allow the Library owner to
 The index API (/) has a late loan check so when in case of a late loan it would notify the worker about late loan that went into effect. 
 
 ###  Help Methods  
-to convert the time properly I created 2 time converter methods to present the date as dd/mm/yy, and canceled the time in some place but allowed it in cases like Loans so the users could see the second beccause - Technacly.... - a Loan can be returned at the last moment. so showing the seconds can give the users ability to see why it might be considered a late loan. 
+to convert the time properly I created 2 time converter methods to present the date as dd/mm/yy, and canceled the time in some place but allowed it in cases like Loans so the users could see the second because - Technically.... - a Loan can be returned at the last moment. so showing the seconds can give the users ability to see why it might be considered a late loan. 
 
-### DataBase Rsset
+### DataBase Reset
 
-By request an option to Erase all the DataBase and creating 5 deafult Books and customers was made (located at the end)
+By request an option to Erase all the DataBase and creating 5 default Books and customers was made (located at the end)
 
 ### Last remarks 
-Global Error catchers were made (in the end) and at the bottom, after Main and under the name **Notes**, I left a route mapping debbug command if you happen to need. 
+Global Error catchers were made (in the end) and at the bottom, after Main and under the name **Notes**, I left a route mapping debug command if you happen to need. 
 ____
 
 
