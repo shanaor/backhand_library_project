@@ -22,14 +22,12 @@ db = SQLAlchemy(app)
 logging.basicConfig(filename='library.log', level=logging.INFO)
 logger = app.logger
 
-#---- Helper functions: to post actions info to the logger file,
-#---- but also to the DataBase table so the User admin can track his employess actions --------
 
+#---- Function to enterData into DataBase table so the User admin can track his employess actions --------
 def log_action(action):
     log_entry = LogEntry(action=action)
     db.session.add(log_entry)
     db.session.commit()
-    # logging.info(f"{action} performed at {datetime.now()}")
 # ----------------------------------------------------------------------------------------
 
 # Enums:
@@ -92,7 +90,11 @@ class ReturnedBooks(db.Model):
     loan_date = db.Column(db.DateTime, nullable=False, default=datetime.now)
     returned_date = db.Column(db.DateTime)
 
-
+# Ensure the database tables are created before the first request
+# wont erase existing Data if it is already existing
+@app.before_first_request
+def create_tables():
+    db.create_all()
 
 
 # API Routes:
