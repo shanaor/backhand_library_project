@@ -42,7 +42,12 @@ Using it in the ***Log_action method*** It is used to allow the Library owner to
 The index API (/) has a late loan check so when in case of a late loan it would notify the worker about late loan that went into effect. 
 
 ###  Help Methods  
-to convert the time properly I created 2 time converter methods to present the date as dd/mm/yy, and canceled the time in some place but allowed it in cases like Loans so the users could see the second because - Technically.... - a Loan can be returned at the last moment. so showing the seconds can give the users ability to see why it might be considered a late loan. 
+To convert the time properly I created 2 time converter methods to present the date as dd/mm/yy, and canceled the time in some cases but allowed it in cases like Loans so the users could see the second because - Technically.... - a Loan can be returned at the last moment. so showing the seconds can give the users ability to see why it might be considered a late loan. <br>
+Its locted at the end of the code. 
+
+### Time Zone issue
+I used the **pytz** library to handle the time zone issue in my Time converter methods. <br>
+Its set to israel and would include Day Time saving changes. 
 
 ### DataBase Reset
 

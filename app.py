@@ -1098,7 +1098,13 @@ def safe_format_datetime(date_value): # A METHOD TO HANDLE TIME ISSUES
         except ValueError:
             return date_value  # If conversion fails, return original string
     
+# adjust the date to correct time zone
+    israel_tz = pytz.timezone('Asia/Jerusalem')
+    
     if isinstance(date_value, datetime):
+        # Convert the datetime to Israel's timezone (handles DST automatically)
+        date_value = date_value.astimezone(israel_tz)
+        # Format the datetime in the desired format
         return date_value.strftime('%d/%m/%Y, %H:%M.%S')
     return date_value  # Return original if it's not a string or datetime
 
@@ -1110,7 +1116,13 @@ def safe_format_datetime_for_log(date_value): # A METHOD TO HANDLE TIME ISSUES F
         except ValueError:
             return date_value  # If conversion fails, return original string
 
+# adjust the date to correct time zone
+    israel_tz = pytz.timezone('Asia/Jerusalem')
+
     if isinstance(date_value, datetime):
+       # Convert the datetime to Israel's timezone (handles DST automatically)
+        date_value = date_value.astimezone(israel_tz)
+        # Format the datetime in the desired format
         return date_value.strftime('%d/%m/%Y')
     return date_value  # Return original if it's not a string or datetime
 
