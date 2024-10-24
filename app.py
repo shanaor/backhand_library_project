@@ -92,10 +92,11 @@ class ReturnedBooks(db.Model):
 
 # Ensure the database tables are created before the first request
 # wont erase existing Data if it is already existing
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
+@app.before_request
+def create_tables_once():
+    if not hasattr(app, 'tables_created'):
+        db.create_all()
+        app.tables_created = True
 
 # API Routes:
 # ===========
