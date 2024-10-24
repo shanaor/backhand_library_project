@@ -1117,17 +1117,17 @@ def safe_format_datetime_for_log(date_value): # A METHOD TO HANDLE TIME ISSUES F
 
 @app.errorhandler(404)
 def not_found(error):
-    logger.error(" Outcome Activated -> unexpected Not found", request.method ,request.path) 
+    logger.error(f" Outcome Activated -> unexpected Not found {request.method} in app {request.path}") 
     return jsonify({"error": "Not found"}), 404
 
 @app.errorhandler(405)
 def method_not_allowed(e):
-    logger.error(" Outcome Activated -> Method not allowed: %s in app %s ", request.method ,request.path)
+    logger.error(f" Outcome Activated -> Method not allowed: {request.method} in app {request.path} " )
     return jsonify({"error": "Method not allowed"}), 405
 
 @app.errorhandler(500)
 def internal_error(error):
-    logger.error(" Outcome Activated -> Internal server error ", request.method ,request.path) 
+    logger.error(f" Outcome Activated -> Internal server error: {request.method} in app {request.path}") 
     return jsonify({"error": "Internal server error"}), 500
 
 
