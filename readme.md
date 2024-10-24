@@ -6,6 +6,8 @@
 
 <br> This is the link to the Frontend ---->>> [Project frontend](https://github.com/shanaor/frontend_library_project?tab=readme-ov-file)
 
+<br> ***Important!!!!*** I used HTML Input restrictions which made some codes in the backend unnecessary , but I left them in because at thier base they are correct as part of correct server actions for a library.
+
 ## <br><u>It has the following features:</u>
 
 1. add customer
@@ -34,7 +36,7 @@ Some of the SQLAlchemy commands are the new style of writing that is entering sl
 
 ###  Logging 
 Logging is made into the Log file -- BUT ALSO - into the DataBase. <br>
-Using it in the ***Log_action method*** It is used to allow the Library owner to track the actions happening in his store so he could make his conclusion about employees and stock and even has bootstrap card presenting the Logs
+Using it in the ***Log_action method*** It is used to allow the Library owner to track the actions happening in his store so he could make his conclusions about employees and stock and even has bootstrap card presenting the Logs (and thats why it has HTML tags, to style the cards)
 
 ###  The alert message 
 The index API (/) has a late loan check so when in case of a late loan it would notify the worker about late loan that went into effect. 
